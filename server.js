@@ -5,14 +5,21 @@ var fs = require('fs');
 var port = process.env.PORT || 8080;
 var app = connect();
 
+function serveTextFile(filepath, response) {
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+  var file = fs.createReadStream(filepath);
+  file.pipe(response);
+}
+
+
 function servePuppyHoff(request, response, next) {
   if (/^mac\./.test(request.headers.host) && request.url === '/') {
-    response.writeHead(200, {'Content-Type': 'text/plain'});
-    var script = fs.createReadStream(__dirname + '/puppyhoff.sh');
-    script.pipe(response);
-    return;
+    serveTextFile(__dirname + '/puppyhoff.sh', response);
+  } else if (/^hannah\./.test(request.headers.host) && request.url === '/') {
+    serveTextFile(__dirname + '/cutehoff.sh', response);
+  } else {
+    next();
   }
-  next();
 }
 
 app.use(servePuppyHoff);
