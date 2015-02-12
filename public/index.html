@@ -3,27 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Puppyhoff.me</title>
+    <link rel='stylesheet' href='/fonts.css'>
     <style>
       body {
         background: black;
+        color: white;
+        font-size: 20px;
+      }
+      .center {
+        position: absolute;
+        width: 360px;
+        height: 40px;
+        top: 50%;
+        left: 50%;
+        margin-left: -180px;
+        margin-top: -20px;
+      }
+      .icon {
+        margin-left: -20px;
+        font-size: 30px;
       }
       input {
         background: black;
         color: white;
         font-family: 'Courier New', Courier, monospace;
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
-        position: absolute;
-        width: 350px;
-        height: 40px;
-        top: 50%;
-        left: 50%;
-        margin-left: -175px;
-        margin-top: -20px;
+        width: 90%;
+        height: 100%;
       }
     </style>
   </head>
   <body>
-    <input type='text' value='curl mac.puppyhoff.me | sh' readonly onClick='this.select();' />
+    <div class='center'>
+      <label class='icon icon-apple'>
+      <input type='text' value='curl mac.puppyhoff.me | sh' readonly onClick='this.select();' />
+    </label>
+    </div>
   </body>
 </html>
