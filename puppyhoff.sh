@@ -873,4 +873,5 @@ osascript <<-===
       set picture of item x of the theDesktops to "~/puppyhoff.jpg"
     end repeat
   end tell
+  display notification "Cool desktop, bro" with title "puppyhoff.me"
 ===
