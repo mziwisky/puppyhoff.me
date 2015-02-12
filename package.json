@@ -1,0 +1,21 @@
+{
+  "name": "puppyhoff",
+  "version": "0.0.1",
+  "description": "Server for puppyhoff.me",
+  "main": "server.js",
+  "dependencies": {
+    "connect": "^3.3.4",
+    "serve-static": "^1.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "puppies",
+    "hasselhoff",
+    "puppyhoff"
+  ],
+  "author": "Mike Ziwisky",
+  "license": "MIT"
+}
