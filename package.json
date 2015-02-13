@@ -1,5 +1,5 @@
 {
-  "name": "puppyhoff",
+  "name": "puppyhoff.me",
   "version": "0.0.1",
   "description": "Server for puppyhoff.me",
   "main": "server.js",
@@ -17,5 +17,6 @@
     "puppyhoff"
   ],
   "author": "Mike Ziwisky",
+  "repository": "mziwisky/puppyhoff.me",
   "license": "MIT"
 }
