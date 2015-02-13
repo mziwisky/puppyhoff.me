@@ -7,7 +7,8 @@ var app = connect();
 
 var puppyhoffers = {
   mac: "mac.sh",
-  hannah: "hannah.sh"
+  hannah: "hannah.sh",
+  gnome: "gnome.sh"
 };
 
 function serveTextFile(filepath, response) {
