@@ -10,35 +10,56 @@
         color: white;
         font-size: 20px;
       }
-      .center {
+      ul {
+        padding: 0;
         position: absolute;
-        width: 360px;
-        height: 40px;
+        width: 400px;
+        height: 200px;
         top: 50%;
         left: 50%;
-        margin-left: -180px;
-        margin-top: -20px;
+        margin: -100px 0 0 -200px;
+      }
+      li {
+        display: inline-block;
+        height: 33%;
+        width: 100%;
       }
       .icon {
         margin-left: -20px;
-        font-size: 30px;
+        font-size: 24px;
       }
       input {
-        background: black;
-        color: white;
+        background: inherit;
+        color: inherit;
+        border: 1px solid;
         font-family: 'Courier New', Courier, monospace;
         font-size: 18px;
         text-align: center;
         width: 90%;
-        height: 100%;
+        height: 50%;
+      }
+      .coming-soon {
+        color: gray;
       }
     </style>
   </head>
   <body>
-    <div class='center'>
-      <label class='icon icon-apple'>
-      <input type='text' value='curl mac.puppyhoff.me | sh' readonly onClick='this.select();' />
-    </label>
-    </div>
+    <ul>
+      <li>
+        <label class='icon icon-apple'>
+          <input class='brief' type='text' value='curl mac.puppyhoff.me | sh' readonly onClick='this.select();' />
+        </label>
+      </li>
+      <li class='coming-soon'>
+        <label class='icon icon-windows'>
+          <input class='brief' type='text' value='coming soon...' readonly onClick='this.select();' />
+        </label>
+      </li>
+      <li class='coming-soon'>
+        <label class='icon icon-linux'>
+          <input class='brief' type='text' value='coming soon...' readonly onClick='this.select();' />
+        </label>
+      </li>
+    </ul>
   </body>
 </html>
