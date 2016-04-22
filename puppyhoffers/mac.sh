@@ -870,7 +870,10 @@ osascript <<-===
   tell application "System Events"
     set theDesktops to a reference to every desktop
     repeat with x from 1 to (count theDesktops)
-      set picture of item x of the theDesktops to "~/puppyhoff.jpg"
+      set thisDesktop to (item x of the the Desktops)
+
+      set picture rotation of thisDesktop to 0
+      set picture of thisDesktop to "~/puppyhoff.jpg"
     end repeat
   end tell
   display notification "Cool desktop, bro" with title "puppyhoff.me"
